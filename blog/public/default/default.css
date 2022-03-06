@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700');
+@import url('https://fonts.googleapis.com/css?family=Source Code Pro');
+
+:root {
+    --background: #f8f8f8;
+    --link-visited: #277e4c;
+    --link-highlight: #2ac23c;
+    --code-block: #E8E8E8;
+    --code-block-alternate: #EEE;
+    --color: #111;
+    --heading: #000;
+    --table-separator: #888;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #f8f8f8;
+        --link-visited: #277e4c;
+        --link-highlight: #2ac23c;
+        --code-block: #E8E8E8;
+        --code-block-alternate: #EEE;
+        --color: #111;
+        --heading: #000;
+        --table-separator: #888;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #111;
+        --link-visited: #277e4c;
+        --link-highlight: #2ac23c;
+        --code-block: #282828;
+        --code-block-alternate: #333;
+        --color: #EEE;
+        --heading: #F8F8F8;
+        --table-separator: #888;
+    }
+}
+
+html {
+    font-size: 120%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato";
+    color: var(--color);
+    background-color: var(--background);
+    margin: 0px auto;
+    max-width: 40rem;
+    letter-spacing: 0.02rem;
+    padding: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        text-align: start;
+    }
+}
+
+a,
+a:visited {
+    color: var(--link-visited);
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: var(--link-highlight);
+}
+
+p {
+    font-size: 1rem;
+    margin: 0.5rem 0px;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading);
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 1rem;
+    border-bottom: thin solid var(--heading);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    margin-top: 1rem;
+    border-bottom: thin dashed var(--heading);
+    padding-bottom: 0.3rem;
+}
+
+code {
+    font-family: "Source Code Pro";
+    background: var(--code-block);
+    font-size: 0.9rem;
+    padding: 0 0.25rem;
+    border-radius: 0.3rem;
+    letter-spacing: 0rem;
+    tab-size: 4;
+}
+
+blockquote {
+    margin-left: 1.2rem;
+    border-left: 3px solid var(--table-separator);
+    padding: 0.2rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    font-style: italic;
+}
+
+li {
+    line-height: 1.4;
+    padding: 0.1rem;
+}
+
+table {
+    min-width: 50%;
+    margin: 0 auto;
+    background: var(--code-block);
+    border-width: 0;
+    border-radius: 0.3rem;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background: var(--code-block-alternate);
+}
+
+thead {
+    border-bottom: thin solid var(--table-separator);
+}
+
+th {
+    font-family: "Montserrat";
+}
+
+th,
+td {
+    padding: 0.4rem 1rem;
+}
